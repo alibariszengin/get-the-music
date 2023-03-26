@@ -13,7 +13,7 @@ from getPageCount import get_categories_all_pages
 
 url = "https://www.4cmusic.com"
 
-
+print("baslanbgıc")
 
 #page = urlopen(url)
 #html = page.read().decode("latin-1")
@@ -28,11 +28,12 @@ page = page.content
 soup = BeautifulSoup(page.decode('utf-8','ignore'))
 #results = soup.find(id="cat_accordion")
 categories = soup.select("ul#cat_accordion>li>ul>li>a")
-
+print(categories)
 allCategories = []
 for i in categories:
     time.sleep(3)
-    get_categories_all_pages(i["href"])
+    print("link" + i["href"])
+    #get_categories_all_pages(i["href"])
 """for i in categories:
     #neo = i.find_parent("li")
     neo = i

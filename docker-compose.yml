@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  getthemusic:
+    image: getthemusic
+    build:
+      context: .
+      dockerfile: ./Dockerfile
